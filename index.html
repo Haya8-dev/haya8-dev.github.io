@@ -6,7 +6,7 @@
     <title>Haya | Web Developer</title>
 
     <style> 
-       * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -34,19 +34,40 @@ a {
     margin: auto;
 }
 
+
+/* =========================
+        HERO SECTION
+========================= */
+
 header {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: #fdf4f7;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(240, 205, 217, 0.45),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 10% 85%,
+            rgba(247, 223, 231, 0.6),
+            transparent 30%
+        ),
+        #fdf4f7;
 }
 
 .hero {
     max-width: 760px;
+    position: relative;
+    z-index: 2;
 }
 
 .hero span {
-    color: #718096;
+    color: #7a8798;
     font-size: 18px;
 }
 
@@ -54,20 +75,27 @@ header {
     font-size: 72px;
     margin: 10px 0;
     color: #1f2f46;
+    letter-spacing: -1px;
 }
 
 .hero h2 {
     font-size: 30px;
     font-weight: 400;
-    color: #394b63;
+    color: #344962;
     margin-bottom: 25px;
 }
 
 .hero p {
-    color: #697789;
+    color: #718095;
     max-width: 630px;
     font-size: 17px;
+    line-height: 1.9;
 }
+
+
+/* =========================
+          BUTTONS
+========================= */
 
 .hero-buttons {
     margin-top: 35px;
@@ -78,30 +106,54 @@ header {
 
 .btn {
     padding: 13px 22px;
-    border-radius: 10px;
+    border-radius: 12px;
     font-size: 15px;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .btn-primary {
     background: #1f2f46;
     color: #ffffff;
     border: 1px solid #1f2f46;
+
+    box-shadow:
+        0 8px 22px rgba(31, 47, 70, 0.15);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 28px rgba(31, 47, 70, 0.2);
 }
 
 .btn-secondary {
-    background: transparent;
-    border: 1px solid #1f2f46;
+    background: rgba(255, 255, 255, 0.25);
     color: #1f2f46;
+
+    border:
+        1px solid #1f2f46;
 }
 
-.btn:hover {
+.btn-secondary:hover {
+    background: #ffffff;
     transform: translateY(-3px);
 }
 
+
+/* =========================
+          SECTIONS
+========================= */
+
 section {
     padding: 90px 0;
-    background: #fdf4f7;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fdf4f7 0%,
+            #fff9fb 100%
+        );
 }
 
 .section-title {
@@ -110,6 +162,11 @@ section {
     color: #1f2f46;
 }
 
+
+/* =========================
+          PROJECTS
+========================= */
+
 .projects {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -117,18 +174,32 @@ section {
 }
 
 .project-card {
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.78);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
     padding: 32px;
-    border-radius: 18px;
-    border: 1px solid #eadfe4;
-    box-shadow: 0 10px 30px rgba(31, 47, 70, 0.05);
-    transition: 0.3s;
+
+    border-radius: 20px;
+
+    border:
+        1px solid #eadfe4;
+
+    box-shadow:
+        0 12px 35px rgba(31, 47, 70, 0.06);
+
+    transition: 0.3s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 16px 40px rgba(31, 47, 70, 0.10);
-    border-color: #d8c7cf;
+    transform: translateY(-7px);
+
+    border-color:
+        #dbc8d0;
+
+    box-shadow:
+        0 18px 45px rgba(31, 47, 70, 0.11);
 }
 
 .project-card h3 {
@@ -138,9 +209,15 @@ section {
 }
 
 .project-card p {
-    color: #697789;
+    color: #718095;
     margin-bottom: 22px;
+    line-height: 1.8;
 }
+
+
+/* =========================
+            TAGS
+========================= */
 
 .tags {
     display: flex;
@@ -151,10 +228,21 @@ section {
 .tag {
     background: #f8e9ee;
     color: #1f2f46;
+
     padding: 6px 10px;
-    border-radius: 7px;
+
+    border-radius: 8px;
+
     font-size: 13px;
+
+    border:
+        1px solid #f0dfe6;
 }
+
+
+/* =========================
+           SKILLS
+========================= */
 
 .skills {
     display: flex;
@@ -163,28 +251,101 @@ section {
 }
 
 .skill {
-    background: #ffffff;
-    border: 1px solid #eadfe4;
-    padding: 12px 18px;
-    border-radius: 10px;
-    color: #1f2f46;
+    background: rgba(255, 255, 255, 0.8);
+
+    border:
+        1px solid #eadfe4;
+
+    padding:
+        12px 18px;
+
+    border-radius:
+        10px;
+
+    color:
+        #1f2f46;
+
+    box-shadow:
+        0 6px 18px rgba(31, 47, 70, 0.04);
+
+    transition:
+        0.3s ease;
+}
+
+.skill:hover {
+    transform:
+        translateY(-3px);
+
+    border-color:
+        #d9c4cd;
+}
+
+
+/* =========================
+          CONTACT
+========================= */
+
+#contact {
+    background:
+        radial-gradient(
+            circle at 90% 50%,
+            rgba(244, 216, 226, 0.5),
+            transparent 30%
+        ),
+        #fdf4f7;
 }
 
 #contact p {
-    color: #697789 !important;
+    color:
+        #718095 !important;
+
+    font-size:
+        17px;
 }
+
+
+/* =========================
+           FOOTER
+========================= */
 
 footer {
-    background: #f8e9ee;
-    border-top: 1px solid #eadfe4;
-    padding: 35px 0;
-    color: #718096;
-    text-align: center;
+    background:
+        #f8e9ee;
+
+    border-top:
+        1px solid #eadfe4;
+
+    padding:
+        35px 0;
+
+    color:
+        #7c8897;
+
+    text-align:
+        center;
 }
 
+
+/* =========================
+           MOBILE
+========================= */
+
 @media (max-width: 700px) {
+
+    .container {
+        width: 90%;
+    }
+
     header {
-        min-height: 85vh;
+        min-height: 88vh;
+
+        background:
+            radial-gradient(
+                circle at 90% 15%,
+                rgba(240, 205, 217, 0.45),
+                transparent 25%
+            ),
+            #fdf4f7;
     }
 
     .hero h1 {
@@ -197,6 +358,15 @@ footer {
 
     .hero p {
         font-size: 16px;
+        line-height: 1.9;
+    }
+
+    .hero-buttons {
+        gap: 12px;
+    }
+
+    .btn {
+        padding: 12px 18px;
     }
 
     .projects {
@@ -205,6 +375,15 @@ footer {
 
     section {
         padding: 65px 0;
+    }
+
+    .section-title {
+        font-size: 31px;
+        margin-bottom: 30px;
+    }
+
+    .project-card {
+        padding: 26px;
     }
 }
     </style>
