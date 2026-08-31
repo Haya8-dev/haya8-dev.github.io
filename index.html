@@ -6,7 +6,7 @@
     <title>Haya | Web Developer</title>
 
     <style> 
-        *{
+       * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -18,8 +18,8 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    background: #f7f8fa;
-    color: #1d1f24;
+    background: #fdf4f7;
+    color: #1f2f46;
     line-height: 1.6;
 }
 
@@ -34,15 +34,11 @@ a {
     margin: auto;
 }
 
-/* HERO */
-
 header {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background:
-        radial-gradient(circle at top right, #eef2ff 0%, transparent 35%),
-        #f7f8fa;
+    background: #fdf4f7;
 }
 
 .hero {
@@ -50,25 +46,25 @@ header {
 }
 
 .hero span {
-    color: #6c7280;
+    color: #718096;
     font-size: 18px;
 }
 
 .hero h1 {
     font-size: 72px;
     margin: 10px 0;
-    color: #15171b;
+    color: #1f2f46;
 }
 
 .hero h2 {
     font-size: 30px;
     font-weight: 400;
-    color: #59606d;
+    color: #394b63;
     margin-bottom: 25px;
 }
 
 .hero p {
-    color: #6f7682;
+    color: #697789;
     max-width: 630px;
     font-size: 17px;
 }
@@ -88,34 +84,31 @@ header {
 }
 
 .btn-primary {
-    background: #1f2937;
-    color: white;
-    border: 1px solid #1f2937;
+    background: #1f2f46;
+    color: #ffffff;
+    border: 1px solid #1f2f46;
 }
 
 .btn-secondary {
-    background: white;
-    border: 1px solid #d8dce3;
-    color: #24272d;
+    background: transparent;
+    border: 1px solid #1f2f46;
+    color: #1f2f46;
 }
 
 .btn:hover {
     transform: translateY(-3px);
 }
 
-/* SECTIONS */
-
 section {
     padding: 90px 0;
+    background: #fdf4f7;
 }
 
 .section-title {
     font-size: 36px;
     margin-bottom: 40px;
-    color: #17191d;
+    color: #1f2f46;
 }
-
-/* PROJECTS */
 
 .projects {
     display: grid;
@@ -127,25 +120,25 @@ section {
     background: #ffffff;
     padding: 32px;
     border-radius: 18px;
-    border: 1px solid #e3e6eb;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    border: 1px solid #eadfe4;
+    box-shadow: 0 10px 30px rgba(31, 47, 70, 0.05);
     transition: 0.3s;
 }
 
 .project-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
-    border-color: #cfd4dc;
+    box-shadow: 0 16px 40px rgba(31, 47, 70, 0.10);
+    border-color: #d8c7cf;
 }
 
 .project-card h3 {
     font-size: 23px;
     margin-bottom: 12px;
-    color: #1b1d22;
+    color: #1f2f46;
 }
 
 .project-card p {
-    color: #6f7682;
+    color: #697789;
     margin-bottom: 22px;
 }
 
@@ -156,14 +149,12 @@ section {
 }
 
 .tag {
-    background: #f0f2f5;
-    color: #505762;
+    background: #f8e9ee;
+    color: #1f2f46;
     padding: 6px 10px;
     border-radius: 7px;
     font-size: 13px;
 }
-
-/* SKILLS */
 
 .skills {
     display: flex;
@@ -172,33 +163,26 @@ section {
 }
 
 .skill {
-    background: white;
-    border: 1px solid #e0e3e8;
+    background: #ffffff;
+    border: 1px solid #eadfe4;
     padding: 12px 18px;
     border-radius: 10px;
-    color: #3c424b;
+    color: #1f2f46;
 }
-
-/* CONTACT */
 
 #contact p {
-    color: #6f7682 !important;
+    color: #697789 !important;
 }
 
-/* FOOTER */
-
 footer {
-    background: white;
-    border-top: 1px solid #e5e7eb;
+    background: #f8e9ee;
+    border-top: 1px solid #eadfe4;
     padding: 35px 0;
-    color: #9298a1;
+    color: #718096;
     text-align: center;
 }
 
-/* MOBILE */
-
 @media (max-width: 700px) {
-
     header {
         min-height: 85vh;
     }
