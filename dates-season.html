@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
 
@@ -12,7 +12,6 @@
 
     <title>Unaizah International Dates Season | Haya</title>
 
-    <!-- Poppins Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link
@@ -22,15 +21,11 @@
     >
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700&display=swap"
         rel="stylesheet"
     >
 
     <style>
-
-        /* =========================
-                GENERAL
-        ========================= */
 
         * {
             margin: 0;
@@ -49,6 +44,10 @@
             line-height: 1.7;
         }
 
+        body.arabic {
+            font-family: 'Tajawal', sans-serif;
+        }
+
         a {
             text-decoration: none;
             color: inherit;
@@ -61,19 +60,14 @@
         }
 
 
-        /* =========================
-                NAVIGATION
-        ========================= */
+        /* NAVIGATION */
 
         nav {
-            padding: 25px 0;
+            padding: 20px 0;
             border-bottom: 1px solid #eadfe4;
-
-            background: rgba(253, 244, 247, 0.9);
-
+            background: rgba(253, 244, 247, 0.92);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-
             position: sticky;
             top: 0;
             z-index: 100;
@@ -83,6 +77,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 20px;
         }
 
         .logo {
@@ -91,10 +86,15 @@
             color: #1f2f46;
         }
 
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
         .back-link {
             color: #617086;
             font-size: 14px;
-            font-weight: 400;
             transition: 0.3s;
         }
 
@@ -103,9 +103,50 @@
         }
 
 
-        /* =========================
-                    HERO
-        ========================= */
+        /* LANGUAGE */
+
+        .language-switch {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            background: rgba(255, 255, 255, 0.75);
+
+            border: 1px solid #eadfe4;
+
+            padding: 4px;
+
+            border-radius: 11px;
+
+            box-shadow:
+                0 6px 18px rgba(31, 47, 70, 0.05);
+        }
+
+        .language-switch button {
+            border: none;
+            background: transparent;
+            color: #657286;
+
+            font-family: inherit;
+            font-size: 12px;
+            font-weight: 500;
+
+            padding: 6px 10px;
+
+            border-radius: 7px;
+
+            cursor: pointer;
+
+            transition: 0.25s;
+        }
+
+        .language-switch button.active {
+            background: #1f2f46;
+            color: white;
+        }
+
+
+        /* HERO */
 
         .hero {
             padding: 110px 0 90px;
@@ -116,102 +157,74 @@
                     rgba(240, 205, 217, 0.5),
                     transparent 28%
                 ),
-
                 radial-gradient(
                     circle at 10% 90%,
                     rgba(247, 223, 231, 0.65),
                     transparent 30%
                 ),
-
                 #fdf4f7;
         }
 
-        .project-label {
+        .hero-top {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 18px;
+        }
+
+        .project-label,
+        .status-label {
             display: inline-block;
-
-            color: #617086;
-
             font-size: 14px;
             font-weight: 500;
-
-            margin-bottom: 18px;
-
             padding: 7px 12px;
-
-            background: #f8e9ee;
-
-            border: 1px solid #f0dfe6;
-
             border-radius: 8px;
+        }
+
+        .project-label {
+            color: #617086;
+            background: #f8e9ee;
+            border: 1px solid #f0dfe6;
         }
 
         .status-label {
-            display: inline-block;
-
-            margin-left: 8px;
-
-            padding: 7px 12px;
-
-            background: #ffffff;
-
             color: #1f2f46;
-
-            border: 1px solid #eadfe4;
-
-            border-radius: 8px;
-
-            font-size: 13px;
-            font-weight: 500;
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid #dfd4d9;
         }
 
         .hero h1 {
-            font-size: 58px;
-            line-height: 1.15;
-
+            font-size: 54px;
+            line-height: 1.18;
             color: #1f2f46;
-
-            margin-bottom: 18px;
-
+            margin-bottom: 22px;
             letter-spacing: -2px;
+            max-width: 900px;
         }
 
         .hero-description {
             max-width: 760px;
-
             color: #718095;
-
             font-size: 17px;
-
             line-height: 1.9;
-
             font-weight: 300;
         }
 
 
-        /* =========================
-             PROJECT INFORMATION
-        ========================= */
+        /* PROJECT INFO */
 
         .project-info {
             display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
+            grid-template-columns: repeat(3, 1fr);
             gap: 18px;
-
             margin-top: 45px;
         }
 
         .info-box {
-            background:
-                rgba(255, 255, 255, 0.75);
-
-            border:
-                1px solid #eadfe4;
-
+            background: rgba(255, 255, 255, 0.75);
+            border: 1px solid #eadfe4;
             padding: 22px;
-
             border-radius: 16px;
 
             box-shadow:
@@ -220,30 +233,21 @@
 
         .info-box span {
             display: block;
-
             color: #8994a3;
-
             font-size: 12px;
-
             text-transform: uppercase;
-
             letter-spacing: 1px;
-
             margin-bottom: 5px;
         }
 
         .info-box strong {
             color: #1f2f46;
-
             font-size: 15px;
-
             font-weight: 500;
         }
 
 
-        /* =========================
-                  SECTIONS
-        ========================= */
+        /* SECTIONS */
 
         section {
             padding: 85px 0;
@@ -258,53 +262,34 @@
 
         .section-title {
             font-size: 34px;
-
             font-weight: 600;
-
             color: #1f2f46;
-
             margin-bottom: 25px;
-
             letter-spacing: -1px;
         }
 
         .section-description {
             max-width: 800px;
-
             color: #718095;
-
             font-size: 16px;
-
             line-height: 1.9;
-
             font-weight: 300;
         }
 
 
-        /* =========================
-                  FEATURES
-        ========================= */
+        /* FEATURES */
 
         .features-grid {
             display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
+            grid-template-columns: repeat(2, 1fr);
             gap: 20px;
-
             margin-top: 35px;
         }
 
         .feature-card {
-            background:
-                rgba(255, 255, 255, 0.78);
-
-            border:
-                1px solid #eadfe4;
-
+            background: rgba(255, 255, 255, 0.78);
+            border: 1px solid #eadfe4;
             border-radius: 18px;
-
             padding: 27px;
 
             box-shadow:
@@ -314,11 +299,8 @@
         }
 
         .feature-card:hover {
-            transform:
-                translateY(-5px);
-
-            border-color:
-                #d9c4cd;
+            transform: translateY(-5px);
+            border-color: #d9c4cd;
 
             box-shadow:
                 0 15px 38px rgba(31, 47, 70, 0.09);
@@ -326,28 +308,20 @@
 
         .feature-card h3 {
             color: #1f2f46;
-
             font-size: 18px;
-
             font-weight: 600;
-
             margin-bottom: 8px;
         }
 
         .feature-card p {
             color: #718095;
-
             font-size: 14px;
-
             line-height: 1.8;
-
             font-weight: 300;
         }
 
 
-        /* =========================
-                  MY ROLE
-        ========================= */
+        /* MY ROLE */
 
         .role-list {
             margin-top: 30px;
@@ -362,66 +336,39 @@
 
         .role-list div {
             color: #5f6e81;
-
             font-size: 15px;
-
             padding: 14px 18px;
-
-            background:
-                rgba(255, 255, 255, 0.65);
-
-            border:
-                1px solid #eadfe4;
-
+            background: rgba(255, 255, 255, 0.65);
+            border: 1px solid #eadfe4;
             border-radius: 10px;
         }
 
 
-        /* =========================
-                TECHNOLOGIES
-        ========================= */
+        /* TECHNOLOGIES */
 
         .technologies {
             display: flex;
-
             flex-wrap: wrap;
-
             gap: 12px;
-
             margin-top: 30px;
         }
 
         .technology {
             background: #f8e9ee;
-
             color: #1f2f46;
-
-            border:
-                1px solid #f0dfe6;
-
-            padding:
-                10px 16px;
-
+            border: 1px solid #f0dfe6;
+            padding: 10px 16px;
             border-radius: 9px;
-
             font-size: 14px;
-
-            font-weight: 400;
         }
 
 
-        /* =========================
-                  PREVIEW
-        ========================= */
+        /* PREVIEW */
 
         .gallery {
             display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
+            grid-template-columns: repeat(2, 1fr);
             gap: 20px;
-
             margin-top: 35px;
         }
 
@@ -435,23 +382,16 @@
                     rgba(248,233,238,0.8)
                 );
 
-            border:
-                1px solid #eadfe4;
-
+            border: 1px solid #eadfe4;
             border-radius: 18px;
 
             display: flex;
-
             align-items: center;
-
             justify-content: center;
 
             color: #8b96a5;
-
             font-size: 14px;
-
             text-align: center;
-
             padding: 20px;
 
             box-shadow:
@@ -459,9 +399,7 @@
         }
 
 
-        /* =========================
-                NEXT PROJECT
-        ========================= */
+        /* NEXT PROJECT */
 
         .next-project {
             text-align: center;
@@ -477,70 +415,80 @@
 
         .next-project p {
             color: #8994a3;
-
             font-size: 13px;
-
             margin-bottom: 10px;
         }
 
         .next-project a {
             color: #1f2f46;
-
             font-size: 26px;
-
             font-weight: 600;
-
-            transition: 0.3s;
-        }
-
-        .next-project a:hover {
-            opacity: 0.65;
         }
 
 
-        /* =========================
-                   FOOTER
-        ========================= */
+        /* FOOTER */
 
         footer {
             background: #f8e9ee;
-
-            border-top:
-                1px solid #eadfe4;
-
-            padding:
-                30px 0;
-
+            border-top: 1px solid #eadfe4;
+            padding: 30px 0;
             text-align: center;
-
             color: #7c8897;
-
             font-size: 13px;
         }
 
 
-        /* =========================
-                   MOBILE
-        ========================= */
+        /* ARABIC */
+
+        html[dir="rtl"] .hero,
+        html[dir="rtl"] section:not(.next-project),
+        html[dir="rtl"] .info-box,
+        html[dir="rtl"] .feature-card,
+        html[dir="rtl"] .role-list {
+            text-align: right;
+        }
+
+        html[dir="rtl"] .hero h1,
+        html[dir="rtl"] .section-title {
+            letter-spacing: 0;
+        }
+
+        html[dir="rtl"] .info-box span {
+            letter-spacing: 0;
+        }
+
+
+        /* MOBILE */
 
         @media (max-width: 750px) {
 
             nav {
-                padding: 20px 0;
+                padding: 16px 0;
+            }
+
+            .nav-content {
+                gap: 10px;
+            }
+
+            .nav-right {
+                gap: 8px;
             }
 
             .back-link {
-                font-size: 12px;
+                font-size: 11px;
+            }
+
+            .language-switch button {
+                padding: 5px 7px;
+                font-size: 11px;
             }
 
             .hero {
-                padding:
-                    80px 0 65px;
+                padding: 80px 0 65px;
             }
 
             .hero h1 {
-                font-size: 42px;
-
+                font-size: 38px;
                 letter-spacing: -1px;
             }
 
@@ -548,7 +496,10 @@
                 font-size: 15px;
             }
 
-            .project-info {
+            .project-info,
+            .features-grid,
+            .role-list,
+            .gallery {
                 grid-template-columns: 1fr;
             }
 
@@ -560,29 +511,12 @@
                 font-size: 29px;
             }
 
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .role-list {
-                grid-template-columns: 1fr;
-            }
-
-            .gallery {
-                grid-template-columns: 1fr;
-            }
-
             .placeholder {
                 min-height: 220px;
             }
 
             .next-project a {
                 font-size: 21px;
-            }
-
-            .status-label {
-                margin-left: 0;
-                margin-top: 8px;
             }
         }
 
@@ -594,9 +528,7 @@
 <body>
 
 
-<!-- =========================
-        NAVIGATION
-========================= -->
+<!-- NAVIGATION -->
 
 <nav>
 
@@ -605,49 +537,95 @@
         <a
             href="index.html"
             class="logo"
+            data-en="Haya."
+            data-ar="هيا."
         >
             Haya.
         </a>
 
-        <a
-            href="index.html#projects"
-            class="back-link"
-        >
-            ← Back to Portfolio
-        </a>
+
+        <div class="nav-right">
+
+            <a
+                href="index.html#projects"
+                class="back-link"
+                data-en="← Back to Portfolio"
+                data-ar="العودة للملف الشخصي ←"
+            >
+                ← Back to Portfolio
+            </a>
+
+
+            <div class="language-switch">
+
+                <button
+                    id="englishButton"
+                    class="active"
+                    onclick="changeLanguage('en')"
+                >
+                    EN
+                </button>
+
+                <button
+                    id="arabicButton"
+                    onclick="changeLanguage('ar')"
+                >
+                    عربي
+                </button>
+
+            </div>
+
+        </div>
 
     </div>
 
 </nav>
 
 
-<!-- =========================
-             HERO
-========================= -->
+<!-- HERO -->
 
 <div class="hero">
 
     <div class="container">
 
-        <span class="project-label">
-            Web Development · 2026
-        </span>
+        <div class="hero-top">
 
-        <span class="status-label">
-            In Progress
-        </span>
+            <span
+                class="project-label"
+                data-en="Web Development · 2026"
+                data-ar="تطوير ويب · 2026"
+            >
+                Web Development · 2026
+            </span>
 
-        <h1>
+            <span
+                class="status-label"
+                data-en="In Progress"
+                data-ar="قيد التطوير"
+            >
+                In Progress
+            </span>
+
+        </div>
+
+
+        <h1
+            data-en="Unaizah International Dates Season"
+            data-ar="موسم عنيزة الدولي للتمور"
+        >
             Unaizah International Dates Season
         </h1>
 
-        <p class="hero-description">
 
+        <p
+            class="hero-description"
+            data-en="A web platform developed for a seasonal event, bringing together event information, auction booking and digital management functionality in one user-focused experience."
+            data-ar="منصة ويب مطوّرة لفعالية موسمية، تجمع معلومات الفعاليات وحجوزات المزادات ووظائف الإدارة الرقمية في تجربة سهلة ومتكاملة للمستخدم."
+        >
             A web platform developed for a seasonal event,
             bringing together event information, auction booking
             and digital management functionality in one
             user-focused experience.
-
         </p>
 
 
@@ -655,9 +633,17 @@
 
             <div class="info-box">
 
-                <span>Role</span>
+                <span
+                    data-en="Role"
+                    data-ar="الدور"
+                >
+                    Role
+                </span>
 
-                <strong>
+                <strong
+                    data-en="Web Developer"
+                    data-ar="مطوّرة ويب"
+                >
                     Web Developer
                 </strong>
 
@@ -666,9 +652,17 @@
 
             <div class="info-box">
 
-                <span>Type</span>
+                <span
+                    data-en="Type"
+                    data-ar="النوع"
+                >
+                    Type
+                </span>
 
-                <strong>
+                <strong
+                    data-en="Event Web Platform"
+                    data-ar="منصة ويب لفعالية"
+                >
                     Event Web Platform
                 </strong>
 
@@ -677,9 +671,17 @@
 
             <div class="info-box">
 
-                <span>Status</span>
+                <span
+                    data-en="Status"
+                    data-ar="الحالة"
+                >
+                    Status
+                </span>
 
-                <strong>
+                <strong
+                    data-en="In Progress"
+                    data-ar="قيد التطوير"
+                >
                     In Progress
                 </strong>
 
@@ -692,29 +694,28 @@
 </div>
 
 
-<!-- =========================
-        PROJECT OVERVIEW
-========================= -->
+<!-- PROJECT OVERVIEW -->
 
 <section>
 
     <div class="container">
 
-        <h2 class="section-title">
+        <h2
+            class="section-title"
+            data-en="Project Overview"
+            data-ar="نبذة عن المشروع"
+        >
             Project Overview
         </h2>
 
-        <p class="section-description">
-
+        <p
+            class="section-description"
+            data-en="The Unaizah International Dates Season platform is being developed to support the digital experience of the seasonal event. The website brings together event information, auction-related experiences and booking functionality while creating a clear and accessible experience for visitors."
+            data-ar="يتم تطوير منصة موسم عنيزة الدولي للتمور لدعم التجربة الرقمية للفعالية الموسمية. يجمع الموقع معلومات الفعاليات وتجارب المزادات وخدمات الحجز ضمن تجربة واضحة وسهلة للزوار."
+        >
             The Unaizah International Dates Season platform
             is being developed to support the digital experience
             of the seasonal event.
-
-            The website brings together event information,
-            auction-related experiences and booking functionality
-            while creating a clear and accessible experience
-            for visitors.
-
         </p>
 
     </div>
@@ -722,15 +723,17 @@
 </section>
 
 
-<!-- =========================
-          KEY FEATURES
-========================= -->
+<!-- KEY FEATURES -->
 
 <section>
 
     <div class="container">
 
-        <h2 class="section-title">
+        <h2
+            class="section-title"
+            data-en="Key Features"
+            data-ar="أبرز المميزات"
+        >
             Key Features
         </h2>
 
@@ -740,13 +743,19 @@
 
             <div class="feature-card">
 
-                <h3>
+                <h3
+                    data-en="Event Information"
+                    data-ar="معلومات الفعاليات"
+                >
                     Event Information
                 </h3>
 
-                <p>
-                    Dedicated pages presenting season
-                    information, activities and event details.
+                <p
+                    data-en="Dedicated pages provide season information, activities and event details."
+                    data-ar="صفحات مخصصة لعرض معلومات الموسم والفعاليات والتفاصيل المرتبطة بها."
+                >
+                    Dedicated pages provide season information,
+                    activities and event details.
                 </p>
 
             </div>
@@ -754,13 +763,18 @@
 
             <div class="feature-card">
 
-                <h3>
+                <h3
+                    data-en="Auction Booking"
+                    data-ar="حجز المزادات"
+                >
                     Auction Booking
                 </h3>
 
-                <p>
-                    Booking functionality designed for
-                    selected auction experiences.
+                <p
+                    data-en="Booking functionality for selected auction experiences."
+                    data-ar="نظام حجز مخصص لتجارب المزادات المتاحة ضمن الموسم."
+                >
+                    Booking functionality for selected auction experiences.
                 </p>
 
             </div>
@@ -768,13 +782,18 @@
 
             <div class="feature-card">
 
-                <h3>
+                <h3
+                    data-en="Seat Management"
+                    data-ar="إدارة المقاعد"
+                >
                     Seat Management
                 </h3>
 
-                <p>
-                    Capacity and reservation management
-                    for supported booking experiences.
+                <p
+                    data-en="Capacity and reservation management for auction bookings."
+                    data-ar="إدارة الطاقة الاستيعابية والمقاعد والحجوزات الخاصة بالمزادات."
+                >
+                    Capacity and reservation management for auction bookings.
                 </p>
 
             </div>
@@ -782,13 +801,18 @@
 
             <div class="feature-card">
 
-                <h3>
+                <h3
+                    data-en="Booking Confirmation"
+                    data-ar="تأكيد الحجز"
+                >
                     Booking Confirmation
                 </h3>
 
-                <p>
-                    Confirmation functionality supporting
-                    the booking process.
+                <p
+                    data-en="Booking confirmation functionality after successful reservation."
+                    data-ar="تأكيد الحجز للمستخدم بعد إتمام عملية الحجز بنجاح."
+                >
+                    Booking confirmation functionality after successful reservation.
                 </p>
 
             </div>
@@ -796,13 +820,18 @@
 
             <div class="feature-card">
 
-                <h3>
+                <h3
+                    data-en="Database Integration"
+                    data-ar="ربط قاعدة البيانات"
+                >
                     Database Integration
                 </h3>
 
-                <p>
-                    Backend functionality connected to
-                    database-driven booking data.
+                <p
+                    data-en="Backend functionality connected to database-driven booking data."
+                    data-ar="ربط الوظائف الخلفية بقاعدة البيانات لإدارة بيانات الحجوزات."
+                >
+                    Backend functionality connected to database-driven booking data.
                 </p>
 
             </div>
@@ -810,13 +839,18 @@
 
             <div class="feature-card">
 
-                <h3>
+                <h3
+                    data-en="Administrative Tools"
+                    data-ar="أدوات الإدارة"
+                >
                     Administrative Tools
                 </h3>
 
-                <p>
-                    Internal functionality supporting
-                    booking and event management.
+                <p
+                    data-en="Internal functionality supporting booking and event management."
+                    data-ar="وظائف داخلية تساعد في إدارة الحجوزات وبيانات الفعاليات."
+                >
+                    Internal functionality supporting booking and event management.
                 </p>
 
             </div>
@@ -829,50 +863,76 @@
 </section>
 
 
-<!-- =========================
-             MY ROLE
-========================= -->
+<!-- MY ROLE -->
 
 <section>
 
     <div class="container">
 
-        <h2 class="section-title">
+        <h2
+            class="section-title"
+            data-en="My Role"
+            data-ar="دوري في المشروع"
+        >
             My Role
         </h2>
 
 
         <div class="role-list">
 
-            <div>
+            <div
+                data-en="Website functionality development"
+                data-ar="تطوير وظائف الموقع"
+            >
                 Website functionality development
             </div>
 
-            <div>
+            <div
+                data-en="PHP backend development"
+                data-ar="تطوير الـ Backend باستخدام PHP"
+            >
                 PHP backend development
             </div>
 
-            <div>
+            <div
+                data-en="MySQL database integration"
+                data-ar="ربط قاعدة بيانات MySQL"
+            >
                 MySQL database integration
             </div>
 
-            <div>
+            <div
+                data-en="Booking and reservation logic"
+                data-ar="تطوير منطق الحجز والحجوزات"
+            >
                 Booking and reservation logic
             </div>
 
-            <div>
+            <div
+                data-en="Seat and capacity management"
+                data-ar="إدارة المقاعد والطاقة الاستيعابية"
+            >
                 Seat and capacity management
             </div>
 
-            <div>
+            <div
+                data-en="Booking confirmation functionality"
+                data-ar="تطوير وظيفة تأكيد الحجز"
+            >
                 Booking confirmation functionality
             </div>
 
-            <div>
+            <div
+                data-en="Testing and functionality improvements"
+                data-ar="اختبار الوظائف وتحسينها"
+            >
                 Testing and functionality improvements
             </div>
 
-            <div>
+            <div
+                data-en="Deployment preparation"
+                data-ar="تجهيز الموقع للنشر"
+            >
                 Deployment preparation
             </div>
 
@@ -883,40 +943,31 @@
 </section>
 
 
-<!-- =========================
-          TECHNOLOGIES
-========================= -->
+<!-- TECHNOLOGIES -->
 
 <section>
 
     <div class="container">
 
-        <h2 class="section-title">
+        <h2
+            class="section-title"
+            data-en="Technologies"
+            data-ar="التقنيات المستخدمة"
+        >
             Technologies
         </h2>
 
-
         <div class="technologies">
 
-            <span class="technology">
-                HTML
-            </span>
+            <span class="technology">HTML</span>
 
-            <span class="technology">
-                CSS
-            </span>
+            <span class="technology">CSS</span>
 
-            <span class="technology">
-                JavaScript
-            </span>
+            <span class="technology">JavaScript</span>
 
-            <span class="technology">
-                PHP
-            </span>
+            <span class="technology">PHP</span>
 
-            <span class="technology">
-                MySQL
-            </span>
+            <span class="technology">MySQL</span>
 
         </div>
 
@@ -925,42 +976,62 @@
 </section>
 
 
-<!-- =========================
-          PROJECT PREVIEW
-========================= -->
+<!-- PROJECT PREVIEW -->
 
 <section>
 
     <div class="container">
 
-        <h2 class="section-title">
+        <h2
+            class="section-title"
+            data-en="Project Preview"
+            data-ar="معاينة المشروع"
+        >
             Project Preview
         </h2>
 
-        <p class="section-description">
-
+        <p
+            class="section-description"
+            data-en="The project is currently in progress. Final screenshots will be added when the platform is ready."
+            data-ar="المشروع حاليًا قيد التطوير، وستتم إضافة الصور النهائية بعد اكتمال المنصة."
+        >
             The project is currently in progress.
             Final screenshots will be added when
             the platform is ready.
-
         </p>
 
 
         <div class="gallery">
 
-            <div class="placeholder">
+            <div
+                class="placeholder"
+                data-en="Homepage Screenshot"
+                data-ar="صورة الصفحة الرئيسية"
+            >
                 Homepage Screenshot
             </div>
 
-            <div class="placeholder">
+            <div
+                class="placeholder"
+                data-en="Events Page Screenshot"
+                data-ar="صورة صفحة الفعاليات"
+            >
                 Events Page Screenshot
             </div>
 
-            <div class="placeholder">
+            <div
+                class="placeholder"
+                data-en="Auction Booking Screenshot"
+                data-ar="صورة صفحة حجز المزاد"
+            >
                 Auction Booking Screenshot
             </div>
 
-            <div class="placeholder">
+            <div
+                class="placeholder"
+                data-en="Booking / Admin Screenshot"
+                data-ar="صورة الحجز / لوحة الإدارة"
+            >
                 Booking / Admin Screenshot
             </div>
 
@@ -971,19 +1042,24 @@
 </section>
 
 
-<!-- =========================
-          NEXT PROJECT
-========================= -->
+<!-- NEXT PROJECT -->
 
 <section class="next-project">
 
     <div class="container">
 
-        <p>
+        <p
+            data-en="Next Project"
+            data-ar="المشروع التالي"
+        >
             Next Project
         </p>
 
-        <a href="graduation-project.html">
+        <a
+            href="graduation-project.html"
+            data-en="Future Chances →"
+            data-ar="فرص المستقبل ←"
+        >
             Future Chances →
         </a>
 
@@ -992,17 +1068,96 @@
 </section>
 
 
-<!-- =========================
-             FOOTER
-========================= -->
+<!-- FOOTER -->
 
 <footer>
 
-    <div class="container">
+    <div
+        class="container"
+        data-en="© 2026 Haya."
+        data-ar="© 2026 هيا."
+    >
         © 2026 Haya.
     </div>
 
 </footer>
+
+
+<script>
+
+    function changeLanguage(language) {
+
+        const elements =
+            document.querySelectorAll('[data-en][data-ar]');
+
+        elements.forEach(function(element) {
+
+            if (language === 'ar') {
+
+                element.textContent =
+                    element.getAttribute('data-ar');
+
+            } else {
+
+                element.textContent =
+                    element.getAttribute('data-en');
+
+            }
+
+        });
+
+
+        if (language === 'ar') {
+
+            document.documentElement.lang = 'ar';
+            document.documentElement.dir = 'rtl';
+
+            document.body.classList.add('arabic');
+
+            document
+                .getElementById('arabicButton')
+                .classList.add('active');
+
+            document
+                .getElementById('englishButton')
+                .classList.remove('active');
+
+        } else {
+
+            document.documentElement.lang = 'en';
+            document.documentElement.dir = 'ltr';
+
+            document.body.classList.remove('arabic');
+
+            document
+                .getElementById('englishButton')
+                .classList.add('active');
+
+            document
+                .getElementById('arabicButton')
+                .classList.remove('active');
+
+        }
+
+
+        localStorage.setItem(
+            'portfolioLanguage',
+            language
+        );
+
+    }
+
+
+    const savedLanguage =
+        localStorage.getItem('portfolioLanguage');
+
+    if (savedLanguage) {
+
+        changeLanguage(savedLanguage);
+
+    }
+
+</script>
 
 
 </body>
