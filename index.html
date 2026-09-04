@@ -433,14 +433,50 @@
         }
 
         #contact p {
-            color:
-                #718095 !important;
+            color: #718095 !important;
+            font-size: 17px;
+            font-weight: 300;
+            max-width: 720px;
+            line-height: 1.9;
+        }
 
-            font-size:
-                17px;
+        .contact-links {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 32px;
+        }
 
-            font-weight:
-                300;
+        .contact-card {
+            display: block;
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid #eadfe4;
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 8px 24px rgba(31, 47, 70, 0.05);
+            transition: 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-4px);
+            border-color: #d9c4cd;
+            box-shadow: 0 12px 30px rgba(31, 47, 70, 0.09);
+        }
+
+        .contact-card span {
+            display: block;
+            color: #8a95a5;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 6px;
+        }
+
+        .contact-card strong {
+            color: #1f2f46;
+            font-size: 14px;
+            font-weight: 500;
+            word-break: break-word;
         }
 
 
@@ -449,26 +485,31 @@
         ========================= */
 
         footer {
-            background:
-                #f8e9ee;
+            background: #f8e9ee;
+            border-top: 1px solid #eadfe4;
+            padding: 30px 0;
+            color: #7c8897;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 300;
+        }
 
-            border-top:
-                1px solid #eadfe4;
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            flex-wrap: wrap;
+            margin-bottom: 14px;
+        }
 
-            padding:
-                35px 0;
+        .footer-links a {
+            color: #5f6e81;
+            font-size: 13px;
+            transition: 0.25s ease;
+        }
 
-            color:
-                #7c8897;
-
-            text-align:
-                center;
-
-            font-size:
-                14px;
-
-            font-weight:
-                300;
+        .footer-links a:hover {
+            color: #1f2f46;
         }
 
 
@@ -566,6 +607,14 @@
 
             .project-card {
                 padding: 26px;
+            }
+
+            .contact-links {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-card {
+                padding: 18px;
             }
         }
 
@@ -812,19 +861,70 @@
 
         <h2
             class="section-title"
-            data-en="Contact"
-            data-ar="التواصل"
+            data-en="Let's Connect"
+            data-ar="لنتواصل"
         >
-            Contact
+            Let's Connect
         </h2>
 
         <p
-            data-en="Interested in working together? Feel free to get in touch."
-            data-ar="مهتمين بالعمل معًا؟ يسعدني تواصلكم معي."
+            data-en="Interested in collaborating or have a professional opportunity? Feel free to reach out."
+            data-ar="هل لديك فرصة للتعاون أو فرصة مهنية؟ يسعدني التواصل معك."
         >
-            Interested in working together?
-            Feel free to get in touch.
+            Interested in collaborating or have a professional opportunity? Feel free to reach out.
         </p>
+
+        <div class="contact-links">
+
+            <a
+                class="contact-card"
+                href="mailto:hayaali110@icloud.com"
+            >
+                <span
+                    data-en="Email"
+                    data-ar="البريد الإلكتروني"
+                >
+                    Email
+                </span>
+
+                <strong>
+                    hayaali110@icloud.com
+                </strong>
+            </a>
+
+
+            <a
+                class="contact-card"
+                href="https://www.linkedin.com/in/haya-alhuwayrini-36698a365"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <span>
+                    LinkedIn
+                </span>
+
+                <strong>
+                    Haya Alhuwayrini
+                </strong>
+            </a>
+
+
+            <a
+                class="contact-card"
+                href="https://github.com/Haya8-dev"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <span>
+                    GitHub
+                </span>
+
+                <strong>
+                    Haya8-dev
+                </strong>
+            </a>
+
+        </div>
 
     </div>
 
@@ -839,11 +939,35 @@
 
     <div class="container">
 
+        <div class="footer-links">
+
+            <a href="mailto:hayaali110@icloud.com">
+                Email
+            </a>
+
+            <a
+                href="https://www.linkedin.com/in/haya-alhuwayrini-36698a365"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                LinkedIn
+            </a>
+
+            <a
+                href="https://github.com/Haya8-dev"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                GitHub
+            </a>
+
+        </div>
+
         <span
-            data-en="© 2026 Haya."
-            data-ar="© 2026 هيا."
+            data-en="© 2026 Haya. All rights reserved."
+            data-ar="© 2026 هيا. جميع الحقوق محفوظة."
         >
-            © 2026 Haya.
+            © 2026 Haya. All rights reserved.
         </span>
 
     </div>
